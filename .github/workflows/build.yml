@@ -6,10 +6,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    permissions:
-      packages: write
-      contents: read
-      metadata: read
     steps:
       - uses: actions/checkout@master
       - name: Set up QEMU
