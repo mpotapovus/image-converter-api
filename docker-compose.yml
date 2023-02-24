@@ -1,0 +1,9 @@
+version: '3'
+services:
+  image-converter:
+    image: image-converter-api:latest
+    container_name: image-converter-api
+    restart: always
+    ports:
+      #      out:inner
+      - '3000:3000'
