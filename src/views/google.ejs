@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Auth By Google</title>
+	</head>
+	<body>
+		<script src="https://accounts.google.com/gsi/client" async defer></script>
+		<script>
+			function handleCredentialResponse(response) {
+				fetch('http://localhost:3000/auth/google', {
+					method: 'POST',
+					headers: {
+						'Content-Type': 'application/json',
+					},
+					body: JSON.stringify({ credentials: response.credential }),
+				});
+			}
+			window.onload = function () {
+				google.accounts.id.initialize({
+					client_id: '928685334722-tk39gosfbu6962ehnfu14028ttglkl02.apps.googleusercontent.com',
+					callback: handleCredentialResponse,
+				});
+				google.accounts.id.renderButton(
+					document.getElementById('buttonDiv'),
+					{ theme: 'outline', size: 'large' },
+				);
+				google.accounts.id.prompt();
+			};
+		</script>
+
+		<button id="buttonDiv" type="button">Google</button>
+	</body>
+</html>

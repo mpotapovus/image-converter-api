@@ -1,0 +1,60 @@
+{
+	"name": "hw-3",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "node ./dist/main.js",
+		"dev": "nodemon",
+		"lint": "eslint ./src/**",
+		"build": "tsc && cp -r ./src/views/ ./dist/",
+		"prettier": "prettier --write ./",
+		"prettier-check": "prettier --check ./"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://gitlab.com/mpotapov.us/hw-3.git"
+	},
+	"keywords": [],
+	"author": "Mikhail Potapov",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://gitlab.com/mpotapov.us/hw-3/issues"
+	},
+	"homepage": "https://gitlab.com/mpotapov.us/hw-3#readme",
+	"devDependencies": {
+		"@types/bcryptjs": "^2.4.2",
+		"@types/express": "^4.17.17",
+		"@types/jsonwebtoken": "^9.0.1",
+		"@types/multer": "^1.4.7",
+		"@types/node": "^18.13.0",
+		"@types/sharp": "^0.31.1",
+		"@typescript-eslint/eslint-plugin": "^5.51.0",
+		"@typescript-eslint/parser": "^5.51.0",
+		"eslint": "^8.34.0",
+		"eslint-config-prettier": "^8.6.0",
+		"eslint-plugin-prettier": "^4.2.1",
+		"nodemon": "^2.0.20",
+		"prettier": "^2.8.4",
+		"ts-node": "^10.9.1",
+		"typescript": "^4.9.5"
+	},
+	"dependencies": {
+		"@types/cookie-parser": "^1.4.3",
+		"@types/express-session": "^1.17.6",
+		"@types/morgan": "^1.9.4",
+		"bcryptjs": "^2.4.3",
+		"cookie-parser": "^1.4.6",
+		"dayjs": "^1.11.7",
+		"ejs": "^3.1.8",
+		"express": "^4.18.2",
+		"express-session": "^1.17.3",
+		"firebase": "^9.17.1",
+		"jsonwebtoken": "^9.0.0",
+		"morgan": "^1.10.0",
+		"multer": "^1.4.5-lts.1",
+		"nanoid": "^3.0.1",
+		"sharp": "^0.31.3",
+		"zod": "^3.20.6"
+	}
+}
